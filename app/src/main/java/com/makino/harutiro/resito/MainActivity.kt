@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
-    var NedanDate: List <nedanDate> = listof(
+    var NedanDate: List <nedanDate> = listOf(
         nedanDate(1,1,1,1,1),
         nedanDate(1,1,1,1,1),
         nedanDate(1,1,1,1,1)
