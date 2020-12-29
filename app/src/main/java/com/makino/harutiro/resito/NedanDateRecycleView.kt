@@ -1,9 +1,9 @@
 package com.makino.harutiro.resito
 
-class nedanDate (
-    val hizuke:Int,
+class NedanDateRecycleView (
+    val hizuke:String,
     val nedan:Int,
     val saihuIcon:Int,
-    val zyanru:Int,
+    val zyanruIcon:Int,
     val saihu:Int
         )

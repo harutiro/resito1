@@ -12,15 +12,15 @@ class RecyclerViewAdapter(private val context: Context):
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
     //リサイクラービューに表示するリストを宣言する
-    val items: MutableList<nedanDate> = mutableListOf()
+    val items: MutableList<NedanDateRecycleView> = mutableListOf()
 
     //データをcourseDateと結びつける？？
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val hizuke_V: TextView = view.findViewById(R.id.hizuke)
-        val nedan_V: TextView = view.findViewById(R.id.nedan)
-        val saihu_V: TextView = view.findViewById(R.id.saihu)
-        val saihuIcon_V: ImageView = view.findViewById(R.id.saihuIcon)
-        val zyanru_V: ImageView = view.findViewById(R.id.zyanru)
+        val hizuke_V: TextView = view.findViewById(R.id.hizukeId)
+        val nedan_V: TextView = view.findViewById(R.id.nedanId)
+        val saihu_V: TextView = view.findViewById(R.id.saihuId)
+        val saihuIcon_V: ImageView = view.findViewById(R.id.saihuIconId)
+        val zyanru_V: ImageView = view.findViewById(R.id.zyanruIconId)
 
     }
 
@@ -34,7 +34,7 @@ class RecyclerViewAdapter(private val context: Context):
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.saihuIcon_V.setImageResource(item.saihuIcon)
-        holder.zyanru_V.setImageResource(item.zyanru)
+        holder.zyanru_V.setImageResource(item.zyanruIcon)
         holder.hizuke_V.text = item.hizuke.toString()
         holder.nedan_V.text = item.nedan.toString()
         holder.saihu_V.text = item.saihu.toString()
@@ -42,7 +42,7 @@ class RecyclerViewAdapter(private val context: Context):
     }
 
     //引数にとったリストをadapterに追加するメソッド
-    fun addAll(items: List<nedanDate>){
+    fun addAll(items: List<NedanDateRecycleView>){
         this.items.addAll(items)
         notifyDataSetChanged()
     }
